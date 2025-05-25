@@ -1,0 +1,58 @@
+@use '../env' as *;
+
+@font-face {
+	font-weight: 400;
+	font-style: normal;
+	font-family: 'TT Polls';
+	font-display: swap;
+	src: url('/tt-polls.woff2') format('woff2');
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	overflow: hidden scroll;
+	font-size: 32px;
+	line-height: 48px;
+	font-family: 'TT Polls', serif;
+	font-feature-settings:
+		'tnum' on,
+		'lnum' on;
+	color: #0d0d86;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	background-color: #76726e;
+	background-image: url('/back.webp');
+	background-attachment: fixed;
+	-webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+	margin: 0 0 48px;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
+	transform: translateY(-2px);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+	@include hover {
+		color: #0069ff;
+	}
+}
+
+p {
+	margin: 0;
+	text-indent: 1.25em;
+}
+
+time {
+	display: block;
+	margin-top: 48px;
+	text-align: right;
+}
